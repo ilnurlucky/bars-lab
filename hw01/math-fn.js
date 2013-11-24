@@ -53,6 +53,18 @@
  * @return {Number} факториал числа.
  */
 
+
+function factorial(n){
+
+	function isNumber(x){
+ 		return (typeof x === "number") && !isNaN(x) && isFinite(x);
+ 	} 	
+
+  return n ? n * factorial(n-1) : 1;
+}
+
+
+
 /**
  * Задание 2. Создать функцию nfib для подсчета n-го числа Фибоначчи
  * (http://ru.wikipedia.org/wiki/Числа_Фибоначчи)
@@ -67,3 +79,25 @@
  *
  * @return {Number} Число Фибоначчи.
  */
+
+ function nfib(n){
+
+ 	function isNumber(x){
+ 		return (typeof x === "number") && !isNaN(x) && isFinite(x);
+ 	}
+
+	if(!isNumber(n)){
+ 		throw new Error("Invalid argument");
+ 	}
+
+
+	var k = 0;
+ 	for(i = 1; i <= n; i = i + k){
+ 		if(i == n){
+ 			return k;
+ 		} else {
+ 			k = k + i;
+ 		}
+ 	};
+ 	return k;
+ }
