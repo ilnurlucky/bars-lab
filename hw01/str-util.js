@@ -67,11 +67,11 @@
  */
  function repeat(str, count) {
     if (count < 1) return '';
-    var result = '';
+		var result = '';
     while (count > 0) {
         if (count & 1) {
-		result += str;
-        count >>= 1, str += str;
+			result += str;
+			count >>= 1, str += str;
 		}
 		return result;
 	
@@ -126,7 +126,7 @@ function toGetParams(obj){
  		}
  	}
  	result = result.substring(0, result.length-1);
- 	return result = url + "?" +result;;
+		return result = url + "?" +result;;
 
  }
 
@@ -150,7 +150,7 @@ function toGetParams(obj){
  */
  function startsWith(str, prefix) {
 	if(str.indexOf(prefix) == 0) return true;
-	else return false;
+		else return false;
  }
 
 /**

@@ -95,8 +95,9 @@ function factorial(n){
  	for(i = 1; i <= n; i = i + k){
  		if(i == n){
  			return k;
- 		} else {
- 			k = k + i;
+ 		} 
+		else {
+			k = k + i;
  		}
  	};
  	return k;
